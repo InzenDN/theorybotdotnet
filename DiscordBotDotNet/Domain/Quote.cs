@@ -7,5 +7,6 @@ namespace DiscordBotDotNet.Domain
         public ulong Id { get; set; }
         public string Content { get; set; }
         public string Author { get; set; }
+        public DateTimeOffset Date { get; set; }
     }
 }

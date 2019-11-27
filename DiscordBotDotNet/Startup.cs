@@ -19,14 +19,11 @@ namespace DiscordBotDotNet
         public static IServiceProvider Services { get; private set; }
         private static DiscordClient DiscordClient { get; set; }
 
-        public static async Task RunAsync()
+        public static async Task ConfigureAsync()
         {
             ConfigureConfiguration();
             ConfigureServices();
             ConfigureDiscordCommands();
-
-            var botSetup = new BotSetup(DiscordClient);
-            await botSetup.RunAsync();
 
             using (var scope = Services.CreateScope())
             {
@@ -35,6 +32,17 @@ namespace DiscordBotDotNet
             }
 
             await DiscordClient.ConnectAsync();
+        }
+
+        public static async Task RunAsync()
+        {
+            var botSetup = Services.GetRequiredService<BotSetup>();
+            await botSetup.RunAsync();
+
+            var quoteApp = Services.GetRequiredService<QuoteApp>();
+            await quoteApp.RunAsync();
+
+            await Task.Delay(-1);
         }
 
         private static void ConfigureServices()

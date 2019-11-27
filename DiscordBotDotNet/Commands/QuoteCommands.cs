@@ -18,22 +18,22 @@ namespace DiscordBotDotNet.Commands
             _Quote = quote;
         }
 
-        [Command("quote")]
-        public async Task AddQuote(CommandContext ctx, string flag, DiscordMember member, [RemainingText] string quote)
-        {
-            if (flag != "-a")
-                return;
+        //[Command("quote")]
+        //public async Task AddQuote(CommandContext ctx, string flag, DiscordMember member, [RemainingText] string quote)
+        //{
+        //    if (flag != "-a")
+        //        return;
 
-            await _Quote.AddQuote(member.DisplayName, quote);
-            await ctx.RespondAsync("Quote successfully added.");
-        }
+        //    await _Quote.AddQuote(member.DisplayName, quote);
+        //    await ctx.RespondAsync("Quote successfully added.");
+        //}
 
         [Command("quote")]
         public async Task GetRandomQuote(CommandContext ctx)
         {
             var quote = _Quote.GetRandomQuote();
 
-            await ctx.RespondAsync($"{quote.Content.Trim()}  ―{quote.Author}");
+            await ctx.RespondAsync($"{quote.Content.Trim()}  **―**{quote.Author}, *{quote.Date.LocalDateTime.ToString("MMMM yyyy")}*");
         }
     }
 }

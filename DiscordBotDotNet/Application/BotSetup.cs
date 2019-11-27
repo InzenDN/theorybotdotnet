@@ -18,7 +18,7 @@ namespace DiscordBotDotNet.Application
         {
             _Discord.Ready += OnReady;
             _Discord.GuildMemberAdded += Greet;
-            _Discord.MessageReactionAdded += AddReaction;
+            // _Discord.MessageReactionAdded += AddReaction;
 
             return Task.CompletedTask;
         }

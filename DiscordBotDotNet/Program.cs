@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DiscordBotDotNet.Application;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Threading.Tasks;
 
 namespace DiscordBotDotNet
@@ -7,9 +9,8 @@ namespace DiscordBotDotNet
     {
         static async Task Main(string[] args)
         {
+            await Startup.ConfigureAsync();
             await Startup.RunAsync();
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
         }
     }
 }

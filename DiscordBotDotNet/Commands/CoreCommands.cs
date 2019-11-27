@@ -55,6 +55,12 @@ namespace DiscordBotDotNet.Commands
             await ctx.RespondAsync($"**{ctx.Member.DisplayName}** slapped **{member.DisplayName}** around a bit with a large trout.");
         }
 
+        [Command("channelid")]
+        public async Task GetChannelId(CommandContext ctx)
+        {
+            await ctx.RespondAsync($"{ctx.Channel.Id}");
+        }
+
         [Command("joke")]
         public async Task Joke(CommandContext ctx)
         {
