@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DiscordBotDotNet": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\repos\\DiscordBotDotNet\\DiscordBotDotNet"
+    }
+  }
+}
