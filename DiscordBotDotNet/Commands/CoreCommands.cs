@@ -49,6 +49,12 @@ namespace DiscordBotDotNet.Commands
             await ctx.RespondAsync($"👋 Hi, {ctx.Member.DisplayName}!\nWelcome to {ctx.Guild.Name}");
         }
 
+        [Command("norby")]
+        public async Task NorbySays(CommandContext ctx)
+        {
+            await ctx.RespondAsync("I enjoy the sight of human on their knees.");
+        }
+
         [Command("trout")]
         public async Task SlapTrout(CommandContext ctx, DiscordMember member)
         {

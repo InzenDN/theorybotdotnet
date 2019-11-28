@@ -52,7 +52,7 @@ namespace DiscordBotDotNet.Commands
         {
             int acc = new Random().Next(0, 101);
 
-            if (acc <= 50)
+            if (acc <= 60)
             {
                 if (ctx.User.Mention == member.Mention || member == null)
                 {
@@ -62,7 +62,7 @@ namespace DiscordBotDotNet.Commands
 
                 await ctx.RespondAsync($"**{ctx.Member.DisplayName}** slapped **{member.DisplayName}**\n\n**{ctx.Member.DisplayName}:** {VictoryQuotes[new Random().Next(0, VictoryQuotes.Count)]}");
             }
-            else if (acc <= 75)
+            else if (acc <= 80)
             {
                 await Dodged(ctx, member);
             }
@@ -85,7 +85,7 @@ namespace DiscordBotDotNet.Commands
         {
             int acc = new Random().Next(0, 101);
 
-            if (acc <= 50)
+            if (acc <= 60)
             {
                 if (ctx.User.Mention == member.Mention)
                 {
@@ -95,7 +95,7 @@ namespace DiscordBotDotNet.Commands
 
                 await ctx.RespondAsync($"**{ctx.Member.DisplayName}** stabbed **{member.DisplayName}** with a knife! :dagger::scream:\n\n**{ctx.Member.DisplayName}:** {VictoryQuotes[new Random().Next(0, VictoryQuotes.Count)]}");
             }
-            else if (acc <= 75)
+            else if (acc <= 80)
             {
                 await Dodged(ctx, member);
             }
@@ -124,7 +124,7 @@ namespace DiscordBotDotNet.Commands
         {
             int acc = new Random().Next(0, 101);
 
-            if (acc <= 50)
+            if (acc <= 60)
             {
                 if (ctx.User.Mention == member.Mention)
                 {
@@ -134,7 +134,7 @@ namespace DiscordBotDotNet.Commands
 
                 await ctx.RespondAsync($"**{ctx.Member.DisplayName}** shot **{member.DisplayName}**! :scream::gun:\n\n**{ctx.Member.DisplayName}:** {VictoryQuotes[new Random().Next(0, VictoryQuotes.Count)]}");
             }
-            else if (acc <= 75)
+            else if (acc <= 80)
             {
                 await Dodged(ctx, member);
             }
@@ -155,7 +155,7 @@ namespace DiscordBotDotNet.Commands
         {
             int acc = new Random().Next(0, 101);
 
-            if (acc <= 50)
+            if (acc <= 60)
             {
                 if (ctx.User.Mention == member.Mention)
                 {
@@ -165,7 +165,7 @@ namespace DiscordBotDotNet.Commands
 
                 await ctx.RespondAsync($"**{ctx.Member.DisplayName}** punched **{member.DisplayName}**! :punch:\n\n**{ctx.Member.DisplayName}:** {VictoryQuotes[new Random().Next(0, VictoryQuotes.Count)]}");
             }
-            else if (acc <= 75)
+            else if (acc <= 80)
             {
                 await Dodged(ctx, member);
             }
@@ -186,7 +186,7 @@ namespace DiscordBotDotNet.Commands
         {
             int acc = new Random().Next(0, 101);
 
-            if (acc <= 50)
+            if (acc <= 60)
             {
                 if (ctx.User.Mention == member.Mention)
                 {
@@ -196,7 +196,7 @@ namespace DiscordBotDotNet.Commands
 
                 await ctx.RespondAsync($"**{ctx.Member.DisplayName}** kicked **{member.DisplayName}**!\n\n**{ctx.Member.DisplayName}:** {VictoryQuotes[new Random().Next(0, VictoryQuotes.Count)]}");
             }
-            else if (acc <= 75)
+            else if (acc <= 80)
             {
                 await Dodged(ctx, member);
             }

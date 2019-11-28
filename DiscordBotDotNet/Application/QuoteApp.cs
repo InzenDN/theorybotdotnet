@@ -40,6 +40,10 @@ namespace DiscordBotDotNet.Application
             DiscordMessage message = await e.Channel.GetMessageAsync(msgId);
             string author = ((DiscordMember)(message.Author)).DisplayName;
             string content = message.Content.Trim();
+
+            if (string.IsNullOrEmpty(content))
+                return;
+            
             DateTimeOffset date = message.CreationTimestamp;
 
             var quote = new Quote
